@@ -92,7 +92,7 @@ export default function DashboardLayout({
         {/* Main Content */}
         <div className="flex flex-1 flex-col">
           <DashboardHeader />
-          <main className="flex-1 overflow-auto bg-background p-6">
+          <main className="flex-1 overflow-auto bg-background ">
             {children}
           </main>
         </div>
