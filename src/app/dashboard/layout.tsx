@@ -90,9 +90,9 @@ export default function DashboardLayout({
         </Sidebar>
 
         {/* Main Content */}
-        <div className="flex flex-1 flex-col">
+        <div className="flex flex-1 flex-col m-0 p-0">
           <DashboardHeader />
-          <main className="flex-1 overflow-auto bg-background p-6">
+          <main className="flex-1 overflow-auto bg-background p-6 m-0">
             {children}
           </main>
         </div>
