@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -44,13 +43,9 @@ export default function DashboardLayout({
 
   return (
     <SidebarProvider>
-      <div className="flex min-h-screen w-full flex-col bg-muted/40">
-        <Sidebar
-          side="left"
-          variant="sidebar"
-          collapsible="icon"
-          className="hidden lg:flex"
-        >
+      <div className="flex min-h-screen w-full bg-muted/40">
+        {/* Sidebar */}
+        <Sidebar side="left" variant="sidebar" collapsible="icon">
           <SidebarHeader>
             <Logo />
           </SidebarHeader>
@@ -75,7 +70,7 @@ export default function DashboardLayout({
           <SidebarFooter>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild tooltip={{ children: 'Settings' }}>
+                <SidebarMenuButton asChild tooltip={{ children: "Settings" }}>
                   <Link href="#">
                     <Settings />
                     <span>Settings</span>
@@ -83,7 +78,7 @@ export default function DashboardLayout({
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild tooltip={{ children: 'Profile' }}>
+                <SidebarMenuButton asChild tooltip={{ children: "Profile" }}>
                   <Link href="#">
                     <User />
                     <span>Profile</span>
@@ -93,9 +88,11 @@ export default function DashboardLayout({
             </SidebarMenu>
           </SidebarFooter>
         </Sidebar>
-        <div className="flex flex-col sm:pl-14">
+
+        {/* Main Content */}
+        <div className="flex flex-1 flex-col">
           <DashboardHeader />
-          <main className="flex-1 overflow-auto bg-background">
+          <main className="flex-1 overflow-auto bg-background p-6">
             {children}
           </main>
         </div>
